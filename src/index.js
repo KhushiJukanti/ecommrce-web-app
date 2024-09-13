@@ -22,3 +22,59 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
+
+
+
+
+
+// ecommerce-app/
+// ├── public/
+// │   ├── index.html
+// │   └── ...
+// ├── src/
+// │   ├── components/
+// │   │   ├── ProductList.js
+// │   │   ├── ProductItem.js
+// │   │   └── Checkout.js
+// │   ├── context/
+// │   │   └── AuthContext.js
+// │   ├── pages/
+// │   │   ├── HomePage.js
+// │   │   ├── LoginPage.js
+// │   │   ├── CartPage.js
+// │   │   └── AdminPage.js
+// │   ├── App.js
+// │   ├── index.js
+// │   └── api/
+// │       └── api.js
+// └── db.json
+
+
+// ecommerce-app/
+// ├── public/
+// │   ├── index.html
+// ├── src/
+// │   ├── components/
+// │   │   ├── ProductList.js
+// │   │   ├── Checkout.js
+// │   │   └── ProductItem.js
+// │   ├── context/
+// │   │   └── AuthContext.js
+// │   ├── pages/
+// │   │   ├── HomePage.js
+// │   │   ├── LoginPage.js
+// │   │   ├── CartPage.js
+// │   │   └── AdminPage.js
+// │   ├── App.js
+// │   ├── index.js
+// │   ├── api/
+// │   │   └── api.js
+// │   └── styles/
+// │       └── App.css
+// └── db.json
+
+

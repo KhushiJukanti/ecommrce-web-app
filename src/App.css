@@ -1,6 +1,21 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.visiondesign.com/wp-content/uploads/hero-background-ecommerce-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .App-logo {
   height: 40vmin;

@@ -1,8 +1,7 @@
-# Getting Started with Create React App
+# E-Commerce Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-stack e-commerce application built with React for the frontend and uses a JSON server as a mock backend. The application includes user authentication, product management, cart functionality, and an admin page.
 
-## Available Scripts
 
 In the project directory, you can run:
 
@@ -14,57 +13,107 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Table of Contents
 
-### `npm run build`
+1. [Project Overview](#project-overview)
+2. [Technologies Used](#technologies-used)
+3. [Setup Instructions](#setup-instructions)
+4. [Folder Structure](#folder-structure)
+5. [Pages and Components](#pages-and-components)
+6. [API and Mock Data](#api-and-mock-data)
+7. [Running the Application](#running-the-application)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Overview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This e-commerce application allows users to:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Register and login.
+- Browse products.
+- Add products to the cart.
+- Checkout.
+- Admins can manage products.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Frontend:** React, React Router, React Bootstrap
+- **Backend:** JSON Server (mock API)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clone the Repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/your-repository-url.git
+cd your-repository-name
+```
 
-## Learn More
+### 2. Install Dependencies
+```bash
+    npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Start the JSON Server
+The project uses `json-server` to mock the backend API. Make sure you have `json-server` installed globally. If not, you can install it using:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install -g json-server
+```
+### 4. Configure and Start JSON Server
+In the root directory of your project, start the JSON server with:
+```bash
+json-server --watch db.json --port 5000
+```
 
-### Code Splitting
+## Folder Structure
+Here is a high-level overview of the folder structure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+/your-repository-name
+|-- /public
+|   |-- index.html
+|-- /src
+|   |-- /components
+|   |   |-- CartPage.jsx
+|   |   |-- CheckOut.jsx
+|   |   |-- ProductList.jsx
+|   |-- /context
+|   |   |-- AuthContext.js
+|   |-- /pages
+|   |   |-- AdminPage.jsx
+|   |   |-- HomePage.jsx
+|   |   |-- LoginPage.jsx
+|   |   |-- CustomNavbar.jsx
+|   |   |-- RegisterPage.jsx
+|   |-- App.css
+|   |-- App.js
+|   |-- index.js
+|-- package.json
+|-- db.json
+|-- README.md
+```
 
-### Analyzing the Bundle Size
+## Pages and Components
+- HomePage.jsx: Displays the product list and allows users to add products to the cart.
+- LoginPage.jsx: Provides a login form for user authentication.
+- RegisterPage.jsx: Allows users to register a new account.
+- CartPage.jsx: Displays the contents of the user's cart and allows checkout.
+- AdminPage.jsx: Admin interface for managing products.
+- CheckOut.jsx: Handles the checkout process.
+- CustomNavbar.jsx: Navigation bar with links to different pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API and Mock Data
+- The mock API is provided by json-server and uses the db.json file to store data for:
 
-### Making a Progressive Web App
+- Products: Product information including id, name, category, price, and image URL.
+- Users: User data including id, username, password, and role.
+- Cart: Items added to the user's cart.
+- Orders: Order data including cart contents.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Running the Application
+- Start JSON Server: Run the command `json-server --watch db.json --port 5000` to start the mock backend server.
+- Start React Application: In a separate terminal window, navigate to the project directory and run `npm start` to start the React application.
+- Visit `http://localhost:3000` in your browser to see the application in action.
 
-### Advanced Configuration
+- Feel free to modify this `README.md` file to better suit your project's specific needs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

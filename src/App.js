@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import CartPage from './pages/CartPage';
 import AdminPage from './pages/AdminPage';
-import Checkout from './components/CheckOut';
+import Checkout from './pages/CheckOutPage';
 import CustomNavbar from './pages/Navbar';
 import Register from './pages/RegisterPage';
 
@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/register" element={<Register/>} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/admin" element={<AdminPage />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout/>} />
 
         </Routes>
       </Router>

@@ -1,108 +1,103 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate , Link} from 'react-router-dom';
+import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [formData, setFormData] = useState({
+    username: '',
+    password: ''
+  });
+  
   const [errors, setErrors] = useState({});
+  const [errorMessage, setErrorMessage] = useState('');
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const validateFormFields = () => {
-    let errors = {};
-    if (!username.trim()) {
-      errors.username = "Please enter a valid username";
-    }
-    if (!password) {
-      errors.password = "Password is required";
-    }
-    return errors;
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.username.trim()) newErrors.username = 'Username is required';
+    if (!formData.password) newErrors.password = 'Password is required';
+    return newErrors;
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+    setErrors({ ...errors, [e.target.name]: '' }); // Clear specific error on change
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    // Validate form fields
-    const validationErrors = validateFormFields();
+    const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
     try {
-      // Fetch users from the json-server
       const response = await axios.get('http://localhost:5000/users');
       const users = response.data;
 
-      // Check for valid user
-      const user = users.find(u => u.username === username && u.password === password);
+      const user = users.find(u => u.username === formData.username && u.password === formData.password);
       if (user) {
-        login(user); // Save user context
-        if (user.role === 'admin') {
-          navigate('/admin'); // Navigate to admin dashboard
-        } else {
-          navigate('/home'); // Navigate to home page for normal users
-        }
+        login(user);
+        navigate(user.role === 'admin' ? '/admin' : '/home');
       } else {
-        setErrors({ ...errors, form: 'Invalid credentials' });
+        setErrorMessage('Invalid credentials');
       }
     } catch (error) {
       console.error('Login error:', error);
-      setErrors({ ...errors, form: 'An error occurred during login. Please try again.' });
+      setErrorMessage('An error occurred during login. Please try again.');
     }
   };
 
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
-              <h2 className="card-title text-center mb-4">Login</h2>
-              {errors.form && <div className="alert alert-danger">{errors.form}</div>}
-              <form onSubmit={handleLogin}>
-                <div className="mb-3">
-                  <label htmlFor="username" className="form-label">Username</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="username"
-                    placeholder="Enter your username"
-                    value={username}
-                    onChange={(e) => {
-                      setUsername(e.target.value);
-                      setErrors(prevErrors => ({ ...prevErrors, username: '' })); // Clear username error on change
-                    }}
-                  />
-                  {errors.username && <div className="text-danger">{errors.username}</div>}
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="password" className="form-label">Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    placeholder="Enter your password"
-                    value={password}
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                      setErrors(prevErrors => ({ ...prevErrors, password: '' })); // Clear password error on change
-                    }}
-                  />
-                  {errors.password && <div className="text-danger">{errors.password}</div>}
-                </div>
-                <button type="submit" className="btn btn-primary w-100">Login</button>
-              </form>
-              <p className="mt-3">
-                Your not registered? <Link to="/register">Register here</Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Container className="mt-5" style={{height:'85vh'}}>
+      <Row className="justify-content-md-center">
+        <Col md={6}>
+          <h2>Login</h2>
+          {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
+          <Form onSubmit={handleLogin}>
+            <Form.Group controlId="formUsername" className="mb-3">
+              <Form.Label>Username</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter your username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                isInvalid={!!errors.username}
+              />
+              <Form.Control.Feedback type="invalid">{errors.username}</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group controlId="formPassword" className="mb-3">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Enter your password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                isInvalid={!!errors.password}
+              />
+              <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
+            </Form.Group>
+
+            <Button variant="primary" type="submit" className="w-100">
+              Login
+            </Button>
+          </Form>
+          <p className="mt-3">
+            Not registered? <Link to="/register">Register here</Link>
+          </p>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

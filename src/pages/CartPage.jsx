@@ -34,7 +34,7 @@ const CartPage = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5" style={{height:'85vh'}}>
       <h2>Your Cart</h2>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>

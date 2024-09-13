@@ -33,7 +33,7 @@ const Checkout = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5" style={{height:'85vh'}}>
       <h2>Checkout</h2>
       {cart.length > 0 ? (
         cart.map(item => (

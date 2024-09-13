@@ -1,13 +1,262 @@
 {
-    "products": [
-      { "id": 1, "name": "Product 1", "category": "Category 1", "price": 100 },
-      { "id": 2, "name": "Product 2", "category": "Category 2", "price": 200 }
-    ],
-    "users": [
-      { "id": 1, "username": "admin", "password": "admin123", "role": "admin" },
-      { "id": 2, "username": "user", "password": "user123", "role": "user" }
-    ],
-    "cart": [],
-    "orders": []
-  }
-  
+  "products": [
+    {
+      "id": "1",
+      "name": "Apple iPhone 14",
+      "category": "Electronics",
+      "price": 999,
+      "imageUrl": "https://th.bing.com/th/id/OIP.NEEMbkWjLXzzfgHXpiEHEgHaHa?w=184&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S22",
+      "category": "Electronics",
+      "price": 899,
+      "imageUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCADqANADASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAAAAEGBwMEBQL/xABXEAABAwIDAwMMDAkKBQUAAAABAAIRAwQFITEGEkFRYXEHExQiNXR1gZGhs9EjJDJUc5OxtMHD0vAVFhclNlJVkpQmM0JygqTT1OHxNENThMJERWJjov/EABoBAQACAwEAAAAAAAAAAAAAAAAEBQECAwb/xAAsEQEAAgEDAgMHBQEAAAAAAAAAAQIDBBExEiEFEzIiM0FRYYGRFDRScbFC/9oADAMBAAIRAxEAPwC2kFCEAhJNAIQhAJJoQJNJNAIlCEAhCEAhCEAiUIQCEIQCEIQCSaEAhCEAkmkgE0k0CQo/tJtJQwKlTY1jal5VaXsa+et06c7oe8N7YyZDQCJg5gNJFe19tdpaziW3dVgk7opiiwDxNpz5XHpQXHkkqW/G/an9o3HlZ9hI7YbUy0fhO6G8YlnWN4ZHTfpkeZBdSFSw2u2lgTi2InLWbHP+7p/jftJ+1cR8tj/l0F0IVL/jftL+1cR8Zsf8ul+N+037VxDy2X+XQXShUm7bDa0uo0qOI4lWuK9QU6FClTtalWs45BrGMogz9+ju0qPVprMDzVbQnRlxeWPXI4Fwp03DzrG+ws9Cq+vT6sdu3fqXtuG5Zi6tj9QtXsrqtEkC/oT3xbH6lcL6nDjna9oiW8Y7W4hbSFUvZHVen/j7f4+2/wAJeDedVhr6dI4rYirVa59Ok67sxWe0ZFzaZp7xA4kBa/rNP/OPyz5V/kt1GSqXsjqunIYjbcf+fbf4SBc9VwEh2IUJkR7YtgI0/wCik6zTx264/J5V/ktpCqTsvqse/wCjw/8AUW/+Ag33VapQ4XVKoRo0XFkZ4xD6QCz+rwfzj8nlX+S3EKu9nNvL6pf08H2jtux7uo5lKnXLBSIqPMM66wdoWu0a5uXNBltiKRExMbw5khCFkNJCEDSQhBT23Fd9THr+mSYpvpMaCZAa2hSgDxlx/tKH1bhtRraVJjnPe/clm8alR29uhrA37nzKU7amNosU+FZ6GkoRXtbvfIo031WFxc0UpLxJmABmg9W1zUFxSpBziyq7cDXEmHcInPzrpO1p/wBb/wAStays6rKzL27p9Ybby+hRqfz9xcZ7rnN1DQe2cSBMQJJyzk50/wCt/wCJQdEYRi5sBinYr+wS3fFXeZvGnvbnXOtzvbs8Y82a0V1htDiwwo4OHUexTSFuX9b9nNAO3hS35iP7MxlK5ErLARKRKUoJl1N7WjcY5jN5UaHVMPsLajbzBFM3T3b728hhu70E8qtZVj1MQBiG1oHvfCPlrqzlGyep1rw17yiK9B7SJME8/i51Fw19Os5jhDmktKmC4mMWbg5l3SGTT7MANB+t0Kk8S085KeZXmP8AErBfpnplz3AiTkSMuZce4wOwucZtcZqVa4r2zaQbTY5vWnuotc1jnSN4RJkAwYH9rqzvCTxIJ6IS+UHL5VSYrWpMzSdvh9kyYie0vRGZyOZMn6V5PLumcsg7I66cEw6DnI45ZgA5aBPcbBJjkHjOizSvtTMluGKC6cz20jthAHD7/wCi8EkZZE5AwOXiY9SzFrgYBnKMycjpkvDw6CB2wP8ARgSPHP0rpNYtGzXhD9tqTOxsHvW5V6N1UtN8ZHrdSk+oGxrkWSOk8udvWFZ9xYYdcP8Ad17O2rP/AKz6TXH5VVG2+eFYecs8Upg6yPa1fWeX781p4T3JwbwdY+gYvTeGTM6eN/qrtRERfs3U0k1ZuAQhCAQhCClNtj/KPFPhGehpKL1q1OnT7V3ss55AsYAeM6n79En22I/GTFfhGehpKC1nVKD4J3d15cx5aCDmXAw7IoNuhdvdVFJ+6d+d1zRumdYIGS2ye2Z/W+grSw+gyvdtuKbXNs7OLi4efchwktpAn+k85Aa6nRuW2Dmzp+goMiJSlErLARKUpSgn3Uy7o7Wd74R9crNVY9TLujtZ3thH1ys5Rsnqda8DNDgHNc0gEOBBBggg6ggoRK5tkbvbGraHeYC63c4hp1LZ4OjzLVafcmP9Y0UrqMp1GuY8AtcIcDOijt1bOta5Yc6bxvUjHm9a83r9HOKfMx8f4nYcvV7NmCJDgZGfDM+JLMQHDl3Twz5FkDTMwBydHQnuTnqJzngVXVv2+qRsxxmNIAygfIvBAAMCAXSYiMispmIMEazplxXhwaN4kOzHCDnyRMLrWOqN2s9kQ237l4fnpitMRJ97V/ErUwjuTg3g6x9AxVZtwPzXYHLurSjKMjbV8vF9+a08I7k4N4OsfQMXq/DY2wR91bqPW3kIQrFHCSaEAhCEFIbcH+UmK/CU/Q01G3PNKmKhLZdkxjoJeJgktIIjpXY2pJOPY1JJ/ON+PEKxCij6jt+Kg3of2zXOLd4A+53hmBCDfbeur7tJ5cAzeNNgjrYnUtawBoPLkvYPbM6foK07S3D8QtqdKp12m0uq1qkbobRY0veXCToJ4/KtlvuqfT9BQZpRKSSywcpShIoLA6mOeIbWSI9r4RkY5ays9Vh1Me6O1ne2EfXKzlGyep1rwEk0LRsULWuLenc0nUyAHe6pu4teOOS2kiPKtL0i9em3DMTMTvCMva5rnsfk9pIcIyB5ygEwIJznxmfIuliVvvNNwyN5sNqZagxDj0LltyzymdDzrymfTeTea/hY479cbm9roMdJz4/IvBGR5CDy8mmS9P3okc2kZQZXgnM5kkjgQY8q1xVmu7a07ojtyAMLsOX8K0o5R7WryFaWEdycG8HWPoGKstt8sNwrKJxq34CR7BWGqsHZUuds3s04kknC7OSfgwvU+Gzvg+8q3Uet2kIQrJHCEJIGkmhBQW1Xd3GvCWIemK4TqdB5Bq0mvHS5p/eaQVIdqqTDjWOmpTG9+F76C5ue6d1w14ZyOlcHrVH/AKbPIFkem1KdGlUo0KVKhTqkdeLS41KoBBDX1KhJ3QQDAgSJiRl4pneO8PcAZGPdE8RzJinRGYYyeHahepRg0pSQgEJSlOqCxOpj3Q2s72wf65Wcqx6mPdDazvbCPrlZ6jZPU614JCELRuEIQgxVGNIcHRuPG68ZSRyKOPHW61WmNG1HBuk7syFJnCRA18ufQVGqzg6tVfEGQMydQACqTxaYrSs/HdJ0++8n7kEco8c9CwuGojnOnmK9ucANcuP+yxF30Z56DmKqcd4tE7pMxsjG2/czCufGrbhmfa9ZWDsp+jWzXguz9GFXe2vc3CjOQxm3mdMqFY6qxdlmubs3s21wLSMLs5DgQR7GOBXqPC/cdvnKu1HrdlCEK0RwjJCEAhCEFJbcZbQ4x31TP90t1F5Xd2qc92NY4XOJIxe9aJMw1oYAPEuASssGheZRKBylKUpSjJykT8iUolBY/Uxj8IbWd7YP9crPyVYdTHuhtZ3tg/1ys5RsnqdK8BGSFjfVpsjePiAkrm3ZMkpWpVxC0o7vXXPbvSBLNYE8q8HE8ODH1OyGQ0ZgTv8AiZqVynNjidptDPTM/BtVKrKbXufk1oLnHkAzUYfWFR73EQHPc7okyE7jFLi+dUaxvWbU9q1rgDUqQZl7voA8q1zIyzz6PkXlvE9XGpmK4+IT8GOaRvPLNrBBjm5ehEnp6dViFTIeblCC/XXTm1+VQd+mIdeUX24H5rw/mxakBze1q/OrSwjuTg3g6x9AxVbtoZw7Chl3Yt5jj7BWVj7MOe/Z3Zxz3FznYZaElxkntByr2XhE9WmifrKs1PrdlCEK2RghCSBoQhBRW2FJ1DHcaY5wJdiVxW7XkrU6dUDPkBzUcUo27P8AKHFu+afzWgooshyhJJA0LzKUoPUryePQhInXoQWX1Me6G1ne2D/XKzlWPUx7obV97YP9crOUbJ6nSvDHWrMoU3VH7xa2MmAFxJyAAWs2q2u572Bze1kB0A6RwWW8/mczA32T8i4zMQtKD6oNUAhzIc1rnAsIzbAEa86rNRqYxZIredolIrjm1d4YsacQ+1bmHCm5xGR7UkAHzFcXMuGeXMty8uhdV6lbQOhrQf6LW5AfflWoI8n0ry+pyTlzWvXhPx16axEs9MhonIZZILsz9zqsDnxx+VeGvMwc+dR+mZbtkuMzOus6dKC6QS0xx1zzXgEHPmzMzms7QCAY4GeC7xWLcscIttk6MNwwkHtcVouyyEdj1tFZ+ztF1vgOz9FxBLMNswS3TOk13HpVZbcCMLw7wrTAHJ7Wrq1MI7k4L4OsfQMXr/CoiNNG3zlV6n3jeQhCtUYIQkgaEIQUdt5+kWLd8U/mtBRSVKdvT/KPFu+KfzWgopKyHPQklKJQOUpSlKUDlKUpSlBZ/Ux7obV97YP9crOVY9TDuhtX3tg/1ys48Y11UbJ6nSvDHVa17H03ZhzSOcZZFQq8BpVKrHDtmEiOSMlNHEAZxx6IUNxp4N9XAHBg45ndBmSqDxbFF6Vv8YTdLba0w5rq5EiV5bXn/fMLXqTJz8nIsQfGecKnpWIhMnl0d9vSSZBC89cz1A4cmq0TWJGh8fDkSbUOR51rNW0OtRcSZnXy9BW5TOc6Erl0KumvJkuhTqe56B0iEiu8My4G3PcrDuQ4swx/21dWjhHcnBfB1j6BiqvbZwdhWHZZ/hWnykR2NX8StTCO5OC+DrH0DF63wr9vH9yqdV7xvIQkrRFNCEIBCEIKL29n8ZMW+Hp/NaKiZKle336R4r8PT+bUFE0DSlKUkDlEpJIGkfoQkePQgtDqY5X+1feuD/JWVluORjx6cVWnUxBN/tWAY9q4P9cpxi95Ww6jSqgteatbdazdLQAGknMGeQKFqckYom9uIdsdZt2ht1qzGth8RxOuQzMgcyiGJ1mXF0CzMsYWvdzySG+JZrvGGVmRRDmu4u5OXz8y0Ke8Wl7Y3Zgmc55+K87rNZXLHRRPw4ZrO8tarT5hK13Ut2SfKtl1QCXOjUwOU8ywODqjoBMZEQePOofTsksLut5CchrkstO2fUG8O0pyM3akTGQ1WR1OjR1EugZEzHGXR5ljfdxnl2oyJ+gaLEVieWZnbhuU6TaYAHlPHnWTeiQDLiI/1XMZeS4FzzyDI5cV0LfcqgPDw7OJByno1W07fBiJ35cLbB5OGWDeTE6fj9rVlbmEdycF8HWPoGKpdsmbuGYeTqcTpj+71lbWEdycF8HWPoGL0/hf7f7yq9X7xvJJoVmikhNCBI9SaEFE7f8A6SYr8PT+bUFEipZt/wDpLiw/+6l82oqJoBJCREgjlBCBpFY+tu7Xthk0tynjKXWiAe2GrSJB4SEGVLlWM03Ge21MjXn9abWFpcZmRHmCC1Opj3Q2r71wf5KysHFbK0vbRzbmoKLaR32ViWjrbojV2UHiJVedTR7Kd7tdUeYYyzwhzjzAVtF3sSrXWIVC59QBjC4UqYJDKY8fHlKq9dmpjjptG+/wSsFJt3jts527Z0n1KFOsysQ4hrw14a+M5Eha5p1arqlOiYA3d+dByEyh7qbXObTguGTnR7oaxPIsQe9zw1riGggmDALjoSvNTWKz9Vlv2ZhQa09uS50RloFkbb1RmzdDSImBPilZaTBxkkROa3WNGY0OQ0PjlZrW1pYm20OcLFzjBJJOZk+Nen4VMk82oK7ApgCJAAEySYz86TyREGJ1BJynhqulsMRG8sRklHzhpBgDPX/dZqFoadRrs8sjHOF1ctAJzkmOHSgATkNQR9yosV78us27IltoPzVYaZYrTHOPa1dWvhHcnBfB1j6Biq7bloGE4ccu6tIeW2rq0cI7k4L4OsfQMXq/DI2wR/cqnU+8bqE0KzRghCEAhCEFEbf/AKTYt8LS+bUVElLdv/0lxb4Wl82oqJwUCQmkgSE4SgoEjl6E4KIyKCwNh6pp1tqmCfZKGDaRnu9eMfT4lJaznBrjJBzAgmY45qIbHbwvMfE/8jDDJ6Kql1UksdAG87tQOchea8RtMZp+m2yz00R0ObUpllNz25y3ey5xksdiwvP/AMnQCdZlbV0QKbm8gAaJGgy0W9h1oWU2VHANkZcoESTAUHp9raHW09mzQoNpgcvEmJyWUlgBlrnZHJrSNQdSV0LTD31gH1JZTyIBHbPHMF1Kdpa0xDaY0iXZk+VTsWlyWjttEI9slYlFgL6u4No03tnQNBLvG4iFu0sGuSA+qXOeTJBd9LipE1jGZNaAOYJPzHn1hdq+HV5yzv8A41nUT/zGyNvtKjCQ8EBogB2vTyLEaUZ83CMvIpG5tOoC0hsTpx01ErRqWYcXBhOmh9a55NDEd6M1zzPKvtuxGE4dn/7tSy/7WurPwjuTg3g6x9AxVz1Q6BpYPhhJGeMUhz/8LcKxsJ7lYN4OsvQMVroaTTFtKNmt1X3byEk1OcQhCSBoQhBRm3zHDaXF5Bzq0COh1rRIKim6Vb23uy13iLqeK4dRNasyk2leUKYmq9jJ3KtNvEjQjWIjRVVUpmk5zasU3NJDm1e0c0j9YOgoNXdS3Fsex/r0/wB9vrRFP9en++31oNfcT3Fnin+vT/fb60RT/Xp/vt9aDX3Ubq2Ip/r0/wB9vrRFP9en++31oJTse9gvceYSOuPtMPqsE5ljHPa4jyjyqXhpqFzuDMm66+JVfb3VezuKF5Z1qLbmix1ItqOBp16LtadQTp4+AOoUjpbc02U206uD1A4NIHWb2iWExEgvZvKn1mlyZMsXpG8JeHLWtdpSilbm4uw0tllOKjxwLpIaD5/JzqV2NkIbUqN7Ue5a4e6I4kcg+/PWtlt5h1vvGpg169znb5Lby1A5hm2Y9a635VLEAAYHdgDIAXlrl5ljTaO0e1eDJmie0LIQq4/KrZfsO8/jLX1I/KrZfsO8/jLX1Kx8uzh1QsdeXCfl86rn8qtl+w7z+MtfUg9VSx44Hefxlr6k8uTqhYQY4k58AZI4lI0yMnZy3MnjzZKvvyq2X7DvP4y19STuqtbQ4UsAuXvGjX39uweMtYT5ljypOqGbqnPpswXCKMw+pjPXmNzk06VnW3jB5N4eVTzC2ubheENcIc2ws2uB4EUWAhVdZ4ftLt5jFniWLW5tsHtDFNjWvbRZR3g51KganbOfUgB7oiOgNVugAAAQABAA0A5Au9K9MbNJneTQkmtmCQmhAIQhAljqW9rWINahRqEZTUpsefK4FZE0Gv2Fh/vS1+IpfZR2Fh/vS1+IpfZWwhBrdg4d7ztfiKX2V67Dsfett8TT9SzoQa5ssPOZtLU9NCl9lLsHDvedr8RS+ytlCDW7Bw73nafEUvso7Bw73naZaewUsv8A8rZQg1uwcO952vxFL7KOwcO952nxFL7K2EINfsHD/edr8RS+yvXYlj71tviafqWdCDX7Cw862lqemhS+yjsLD/elr8RS+ythCDX7DsPelt8TS+ygWdg12821tg4ZyKNIGekNWwhAkJoQJCaSBoTQgSE0IPKaaECQmhAkJoCBIQmgSE0IEhNCBJL0hAkJoQJCaECQmhAkIQg//9k="
+    },
+    {
+      "id": "3",
+      "name": "Sony WH-1000XM4",
+      "category": "Audio",
+      "price": 349,
+      "imageUrl": "https://th.bing.com/th/id/OIP.GZjLIIL0GgI4QdMVXIlFegHaHa?w=167&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "4",
+      "name": "Dell XPS 13",
+      "category": "Computers",
+      "price": 1199,
+      "imageUrl": "https://th.bing.com/th/id/OIP.VLOGbGtgbYDP-6sGL6hrpQHaHI?w=157&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "5",
+      "name": "Apple MacBook Air",
+      "category": "Computers",
+      "price": 999,
+      "imageUrl": "https://th.bing.com/th/id/OIP.NWTtACHwzU6KXmLFySj7SQHaF7?w=204&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "6",
+      "name": "Nike Air Max 270",
+      "category": "Footwear",
+      "price": 150,
+      "imageUrl": "https://th.bing.com/th/id/OIP.c6cSTibHX9pMlOWDCxSj0wHaFP?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "7",
+      "name": "Adidas Ultraboost",
+      "category": "Footwear",
+      "price": 180,
+      "imageUrl": "https://th.bing.com/th/id/OIP._3dmrXh2DGWFA5bGhPishQHaE8?w=288&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "8",
+      "name": "Bose QuietComfort 35 II",
+      "category": "Audio",
+      "price": 299,
+      "imageUrl": "https://th.bing.com/th/id/OIP.7Cdx5TiWdqBkbfyY4vHqhAHaE8?w=251&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "9",
+      "name": "Canon EOS R5",
+      "category": "Cameras",
+      "price": 3899,
+      "imageUrl": "https://th.bing.com/th/id/OIP.dZbV7g_CYigQlxkV6sORuQHaHa?w=201&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "10",
+      "name": "GoPro HERO10 Black",
+      "category": "Cameras",
+      "price": 499,
+      "imageUrl": "https://th.bing.com/th/id/OIP.Bg3iiZGhrrvqyTEzw5BLAwHaE7?w=222&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "11",
+      "name": "KitchenAid Stand Mixer",
+      "category": "Appliances",
+      "price": 399,
+      "imageUrl": "https://th.bing.com/th/id/OIP.eNw77iDyPtWBJIBQ_XAmwAHaHa?w=178&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "12",
+      "name": "Dyson V11 Torque Drive",
+      "category": "Appliances",
+      "price": 699,
+      "imageUrl": "https://th.bing.com/th/id/OIP.qL7ierPWaTD5w4UTugJU-QHaHa?w=142&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "13",
+      "name": "Samsung QLED TV",
+      "category": "Electronics",
+      "price": 1200,
+      "imageUrl": "https://th.bing.com/th/id/OIP.QAsT9Cwug2UTzN2G38yxAwHaHO?w=216&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "14",
+      "name": "Fitbit Charge 5",
+      "category": "Wearables",
+      "price": 179,
+      "imageUrl": "https://th.bing.com/th/id/OIP.0e9tLK790WgnRdrz00R3twAAAA?w=194&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "15",
+      "name": "Oculus Quest 2",
+      "category": "Gaming",
+      "price": 299,
+      "imageUrl": "https://th.bing.com/th/id/OIP.UFhjciHl5lHjhD7kKJDdrAHaGH?w=175&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    },
+    {
+      "id": "16",
+      "name": "Microsoft Surface Pro 8",
+      "category": "Computers",
+      "price": 1099,
+      "imageUrl": "https://th.bing.com/th/id/OIP.GiBMnc_7OZdftIWWx33hFgHaFr?w=233&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": "9211",
+      "username": "user1",
+      "password": "123",
+      "role": "user"
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "id": "b0c1",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d835",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "43d7",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "c0b1",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "e576",
+      "cart": [
+        {
+          "id": "2",
+          "name": "Product 2",
+          "category": "Category 2",
+          "price": 200,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+2",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "aa9c",
+      "cart": [
+        {
+          "id": "1",
+          "name": "Product 1",
+          "category": "Category 1",
+          "price": 100,
+          "imageUrl": "https://via.placeholder.com/150?text=Product+1",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d5f1",
+      "cart": [
+        {
+          "id": "febd",
+          "name": "Product 3",
+          "price": 300,
+          "category": "Category 3",
+          "imageUrl": "https://via.placeholder.com/150?text=Product+3",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}

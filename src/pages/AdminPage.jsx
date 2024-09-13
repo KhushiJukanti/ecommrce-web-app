@@ -102,7 +102,7 @@ const AdminPage = () => {
       <h3 className='mb-4'>Existing Products</h3>
       <div className='row'>
         {products.map(product => (
-          <div className='col-md-4 mb-4' key={product.id}>
+          <div className='col-md-3 mb-4' key={product.id}>
             <div className='card'>
               <img src={product.imageUrl} className='card-img-top' alt={product.name} style={{ height: '200px', objectFit: 'cover' }} />
               <div className='card-body'>

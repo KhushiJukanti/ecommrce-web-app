@@ -111,7 +111,7 @@ Here is a high-level overview of the folder structure:
 - Orders: Order data including cart contents.
 
 ## Running the Application
-- Start JSON Server: Run the command `json-server --watch db.json --port 5000` to start the mock backend server.
+- Start JSON Server: Run the command `npx json-server --watch db.json --port 5000` to start the mock backend server.
 - Start React Application: In a separate terminal window, navigate to the project directory and run `npm start` to start the React application.
 - Visit `http://localhost:3000` in your browser to see the application in action.
 

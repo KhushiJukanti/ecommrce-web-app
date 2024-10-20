@@ -9,7 +9,6 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // Initialize user from localStorage when the component mounts
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
@@ -17,16 +16,15 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  // Login function to set user data and store in localStorage
+
   const login = (userData) => {
     setUser(userData);
-    localStorage.setItem('user', JSON.stringify(userData)); // Store user data in localStorage
+    localStorage.setItem('user', JSON.stringify(userData)); 
   };
 
-  // Logout function to clear user data and remove from localStorage
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('user'); // Remove user data from localStorage
+    localStorage.removeItem('user'); 
   };
 
   return (
